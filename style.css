@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'poppins';
+}
+:root{
+    --heading-size:2.8rem;
+    --subHeading-size:2rem;
+    --para-size:1.1rem;
+    --small-para-size:0.9rem;
+    --red-color:#CB210D;
+    --green-color:#6E6E05;
+    --white-color:#F5F5F5;
+    --black-color:#1E1B22;
+    --maroon-color:#56383A;
+}
+nav{
+    position: sticky;
+    z-index: 10000;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+  }
+  nav .wrapper{
+    position: relative;
+    max-width: 1300px;
+    padding: 0px 8rem 0PX 2.4REM;
+    height: 70px;
+    line-height: 70px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapper .logo a {
+    color: var(--red-color);
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+}
+  .wrapper .nav-links{
+    display: inline-flex;
+    margin-bottom: 0 !important;
+  }
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links li a{
+    color: var(--black-color);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 450;
+    padding: 10px 12px;
+    transition: all 0.3s ease;
+    font-family: 'poppins';
+  }
+  .nav-links li a:hover{
+    color: var(--red-color);
+  }
+  
+  .content .row header{
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .content .row .mega-links{
+    margin-left: -40px;
+    border-left: 1px solid rgba(255,255,255,0.09);
+  }
+  .row .mega-links li{
+    padding: 0 20px;
+  }
+  .row .mega-links li a{
+    padding: 0px;
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    display: block;
+  }
+  .row .mega-links li a:hover{
+    color: #f2f2f2;
+  }
+  .wrapper .btn{
+    color: var(--red-color);
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .wrapper .btn.close-btn{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+  }
+  @media screen and (max-width: 970px) {
+    .wrapper .btn{
+      display: block;
+    }
+    nav .wrapper{
+    padding: 0 2rem;
+    }
+    .wrapper .nav-links{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      top: 0;
+      left: -100%;
+      background: #fff;
+      display: block;
+      padding: 50px 10px;
+      line-height: 50px;
+      overflow-y: auto;
+      box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+      transition: all 0.3s ease;
+    }
+    /* custom scroll bar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #242526;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--blue-color1);
+    }
+    #menu-btn:checked ~ .nav-links{
+      left: 0%;
+    }
+    #menu-btn:checked ~ .btn.menu-btn{
+      display: none;
+    }
+    #close-btn:checked ~ .btn.menu-btn{
+      display: block;
+    }
+    .nav-links li{
+      margin: 15px 10px;
+    }
+    .nav-links li a{
+      padding: 0 20px;
+      display: block;
+      font-size: 20px;
+    }
+  }
+  nav input{
+    display: none;
+  }
+/* nav bar ended */
+
+/* Home started */
+.hero{
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.hero img{
+    width: 500px;
+    height: 440px;
+    border-radius: 20px;
+}
+
+.hero .section-1 h1{
+    font-size: var(--heading-size);
+    color: var(--red-color);
+    line-height: 3.3rem;
+}
+.hero .section-1 h3{
+    font-size: var(--subHeading-size);
+    color: var(--maroon-color);
+    margin-top: 1.1rem;
+    line-height: 2.4rem;
+}
+.hero .section-1 p{
+    font-size: var(--small-para-size);
+    color: var(--black-color);
+    line-height: 1.2rem;
+    margin-top: 1.1rem;
+}
+.hero .section-1 a{
+    text-decoration: none;
+}
+.hero .section-1 a button{
+    border-radius: 20px;
+    padding: 10px 30px;
+    background: var(--green-color);
+    color: var(--white-color);
+    margin-top: 1.2rem;
+    cursor: pointer;
+    border: 2px solid var(--maroon-color);
+    transition: all .3s ease-in;
+}
+.hero .section-1 a button:hover{
+    border-color: var(--green-color);
+    background: var(--white-color);
+    color: var(--green-color);
+}
+
+/* hero ended */
+
+/* chocolate section started */
+.chocolate-section{
+    padding: 2rem 4rem;
+    /* text-align: center; */
+}
+.chocolate-section h1{
+    color: var(--red-color);
+    font-size: var(--subHeading-size);
+}
+.chocolate-section p{
+    color: var(--maroon-color);
+    font-size: var(--para-size);
+    margin-top: 10px;
+}
+.chocolate-section .inner-section,.chocolate-section .inner-section .inner-section-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.chocolate-section .inner-section .card,.chocolate-section .inner-section .inner-section-1 .card2{
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0 #00000018;
+    padding: 10px 14px;
+}
+.chocolate-section .inner-section .card .content h1,.chocolate-section .inner-section .card3 h1{
+font-size: var(--para-size);
+color: var(--red-color);
+}
+.chocolate-section .inner-section .card .content p, .chocolate-section .inner-section .card2 .content p,.chocolate-section .inner-section .card3 p{
+    font-size: var(--small-para-size);
+    color: var(--black-color);
+}
+.chocolate-section .inner-section .card .content .rates,.chocolate-section .inner-section .card3 .rates,.chocolate-section .inner-section .card2 .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.chocolate-section .inner-section .card .content .rates p{
+    font-size: var(--para-size);
+}
+.chocolate-section .inner-section .card .content .rates button,.chocolate-section .inner-section .card3 button{
+    background: var(--red-color);
+    padding: 8px 16px;
+    font-size: 12px;
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    transition: all .5s ease-in-out;
+}
+.chocolate-section .inner-section .card .content .rates button:hover,.chocolate-section .inner-section .card3 button:hover{
+color: var(--red-color);
+border: 1.50px solid var(--red-color);
+background: #fff;
+}
+.chocolate-section .inner-section img{
+    width: 100%;
+    border-radius: 20px;
+}
+.chocolate-section .inner-section .card2 img{
+    height: 200px;
+}
+.chocolate-section .inner-section .card2 i{
+    color: var(--green-color);
+}
+.chocolate-section .inner-section .card3 img{
+width: 200px;
+display: grid;
+place-items: center;
+height: 200px;
+}
+.chocolate-section .inner-section .card3{
+    display: flex;
+    gap: 10px;
+    grid-column: span 2;
+    background: var(--white-color);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0 #00000018;
+    padding: 10px 14px;
+}
+/* chocolate section ended */
+
+/* About Started */
+.about{
+  padding: 2rem 4rem;
+}
+.about h1{
+  font-size: var(--subHeading-size);
+  color: var(--green-color);
+  text-align: center;
+}
+.about p{
+  font-size: var(--para-size);
+  color: var(--maroon-color);
+  text-align: center;
+}
+.about .inner-section{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 0 2.8rem;
+}
+.about .inner-section img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.about .inner-section .card{
+  background: var(--red-color);
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 20px 20px;
+  gap: 1.2rem;
+  position: relative;
+}
+.about .inner-section .card h1{
+  color: #fff;
+  font-weight: 500;
+}
+.about .inner-section .card p{
+  color: #fff;
+  font-weight: 400;
+  font-size: var(--small-para-size);
+}
+.about .inner-section .card button{
+  background: #Fff;
+  border-radius: 4px;
+  padding: 10px 40px;
+  border: none;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--small-para-size);
+  font-weight: 600;
+  color: var(--red-color);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.about .inner-section .card button:hover{
+  color: #fff;
+  border: 1.80px solid #fff;
+  background: #6E6E05;
+}
+/* birthday section cake started */
+.birtday{
+  background: var(--black-color);
+  padding: 3rem 4rem 4rem; 
+}
+.birtday h1{
+  font-size: var(--subHeading-size);
+  color: var(--white-color);
+}
+.birtday p{
+  font-size: var(--para-size);
+  color: var(--white-color);
+}
+.birtday .inner-section{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+.birtday .inner-section .card img{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.birtday .inner-section .card h1{
+font-size: var(--para-size);
+margin-top: 10px;
+text-align: center;
+}
+.birtday .inner-section .card p{
+  font-size: var(--small-para-size);
+  text-align: center;
+}
+/* birthday section ended */
+
+/* wedding section started */
+.wedding{
+  padding: 3rem 4rem;
+}
+.wedding h1{
+  font-size: var(--subHeading-size);
+color: var(--red-color);
+}
+.wedding p{
+  font-size: var(--para-size);
+}
+.wedding .inner-section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+.wedding .inner-section .card img{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.wedding .inner-section .card .content{
+display: flex;
+flex-direction: column;
+gap: 4px;
+margin: -5rem -12px 0;
+padding: 5rem 8px 30px;
+transition: .3s ease-in-out;
+}
+.wedding .inner-section .card .content h1{
+  font-size: var(--para-size);
+  color: var(--green-color);
+}
+.wedding .inner-section .card .content p{
+  font-size: var(--small-para-size);
+}
+.wedding .inner-section .card .content i{
+  font-size: 20px;
+  color: var(--maroon-color);
+  cursor: pointer;
+}
+.wedding .inner-section .card:hover .content{
+  background: #6e6e0567;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+.wedding .inner-section .card:hover img{
+  box-shadow: 4px 4px 10px 0 #0000002d;
+}
+.wedding .inner-section .card:hover i{
+  color: var(--white-color);
+}
+/* wedding section ended */
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}  
+
+
+/* responsive started */
+@media screen and (max-width:1100px) {
+  .chocolate-section .inner-section, .chocolate-section .inner-section .inner-section-1 {
+    gap: 1rem;
+  }
+  .hero,.chocolate-section,.birtday,.birtday,.wedding,.about{
+    padding: 2rem;
+  }
+  .about .inner-section{
+    padding: 0 0;
+  }
+}
+@media screen and (max-width:1000px) {
+  .chocolate-section .inner-section{
+    grid-template-columns: 1fr;
+  }
+  .birtday .inner-section,.wedding .inner-section{
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero img {
+    width: 440px;
+  }
+  .hero{
+    gap: 1rem;
+  }
+  .about .inner-section{
+    grid-template-columns: 1fr 1.5fr;
+  }
+  }
+  @media screen and (max-width:920px) {
+    .hero{
+      grid-template-columns: 1fr;
+    }
+    .hero img{
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width:830px) {
+    .about .inner-section .card {
+      padding: 30px 20px 5rem 20px;
+    }
+    .about .inner-section{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+    :root{
+      --heading-size:2.2rem;
+    --subHeading-size:1.5rem;
+    --para-size:0.9rem;
+    --small-para-size:0.7rem;
+    }
+    .hero .section-1 h1 {
+      line-height: 2.6rem;
+    }
+    .hero .section-1 h3 {
+      margin-top: 0.7rem;
+      line-height: 2rem;
+  }
+  .hero .section-1 p {
+    line-height: 1.1rem;
+    margin-top: 0.9rem;
+}
+  }
+  @media screen and (max-width:490px) {
+    .hero img {
+      width: 350px;
+      height: 350px;
+    }
+    .birtday .inner-section, .wedding .inner-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+  .hero, .chocolate-section, .birtday, .birtday, .wedding,.about {
+    padding: 2rem 1rem;
+}
+.chocolate-section .inner-section .card2 img  {
+  height: 150px;
+}
+.chocolate-section .inner-section, .chocolate-section .inner-section .inner-section-1 {
+  gap: 8px;
+}
+.chocolate-section .inner-section .card3 img {
+  height: 100%;
+  width: 150px;
+}
+.about .inner-section img {
+  height: 300px;
+}
+  }
+  @media screen and (max-width:380px) {
+    .hero img {
+      width: 300px;
+      height: 320px;
+  }
+
+}
